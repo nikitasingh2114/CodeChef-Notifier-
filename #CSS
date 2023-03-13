@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+}
+
+#upcoming-contests {
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+.contest {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.contest h2 {
+  color: #333333;
+  margin-top: 0;
+}
+
+.contest p {
+  color: #666666;
+  margin: 0;
+}
+
+.contest .date {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contest .time {
+  margin-bottom: 10px;
+}
