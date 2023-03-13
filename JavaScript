@@ -1,0 +1,24 @@
+const upcomingContestsUrl = 'https://www.codechef.com/api/list/contests/all';
+
+fetch(upcomingContestsUrl)
+  .then(response => response.json())
+  .then(data => {
+    const upcomingContests = data.future_contests;
+    const upcomingContestsContainer = document.getElementById('upcoming-contests');
+    upcomingContests.forEach(contest => {
+      const contestContainer = document.createElement('div');
+      contestContainer.className = 'contest';
+      const title = document.createElement('h2');
+      title.textContent = contest.name;
+      contestContainer.appendChild(title);
+      const date = document.createElement('p');
+      date.className = 'date';
+      date.textContent = `Date: ${contest.date}`;
+      contestContainer.appendChild(date);
+      const time = document.createElement('p');
+      time.className = 'time';
+      time.textContent = `Time: ${contest.time}`;
+      contestContainer.appendChild(time);
+      upcomingContestsContainer.appendChild(contestContainer);
+    });
+  });
